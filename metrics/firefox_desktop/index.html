@@ -4938,7 +4938,7 @@
 <h3 id="daily_active_users_v2">daily_active_users_v2</h3>
 <p><strong>Firefox Desktop DAU</strong></p>
 <p>This is the official DAU reporting definition. The logic is
-    <a href="https://github.com/mozilla/bigquery-etl/blob/main/sql_generators/active_users/templates/desktop_query.sql">defined in <code>bigquery-etl</code></a>
+    <a href="https://github.com/mozilla/bigquery-etl/blob/main/sql/moz-fx-data-shared-prod/telemetry_derived/active_users_aggregates_v1/query.sql#L64">defined in <code>bigquery-etl</code></a>
     and is automatically cross-checked, actively monitored, and change controlled.
     Whenever possible, this is the preferred DAU reporting definition to use for Desktop.
     This metric needs to be aggregated by <code>submission_date</code>. If it is not aggregated by <code>submission_date</code>,
