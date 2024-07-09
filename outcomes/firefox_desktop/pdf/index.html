@@ -799,6 +799,20 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#pdf_free_highlight" class="md-nav__link">
+    pdf_free_highlight
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf_highlight" class="md-nav__link">
+    pdf_highlight
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pdf_opening" class="md-nav__link">
     pdf_opening
   </a>
@@ -2068,6 +2082,20 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#pdf_free_highlight" class="md-nav__link">
+    pdf_free_highlight
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf_highlight" class="md-nav__link">
+    pdf_highlight
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pdf_opening" class="md-nav__link">
     pdf_opening
   </a>
@@ -2153,6 +2181,40 @@
 <p>Usage and engagement metrics for PDFs</p>
 <p><a href="https://github.com/mozilla/metric-hub/blob/main/jetstream/outcomes/firefox_desktop/pdf.toml">Source</a>  |  <a href="https://github.com/mozilla/metric-hub/edit/main/jetstream/outcomes/firefox_desktop/pdf.toml">Edit</a></p>
 <h2 id="metrics">Metrics</h2>
+<h3 id="pdf_free_highlight"><code>pdf_free_highlight</code></h3>
+<hr />
+<p>Analysis Period: <code>weekly</code>, <code>overall</code></p>
+<p>Data Source: <a href="#metrics"><code>metrics</code></a></p>
+<p>Statistics: <code>binomial</code></p>
+<details>
+<summary>Definition:</summary>
+
+
+<pre><code class="language-sql">(
+    COALESCE(SUM(mozfun.map.get_key(metrics.labeled_counter.pdfjs_editing_highlight_kind, &quot;free_highlight&quot;)) &gt; 0, FALSE)
+)
+</code></pre>
+
+</details>
+
+<hr />
+<h3 id="pdf_highlight"><code>pdf_highlight</code></h3>
+<hr />
+<p>Analysis Period: <code>weekly</code>, <code>overall</code></p>
+<p>Data Source: <a href="#metrics"><code>metrics</code></a></p>
+<p>Statistics: <code>binomial</code></p>
+<details>
+<summary>Definition:</summary>
+
+
+<pre><code class="language-sql">(
+    COALESCE(SUM(mozfun.map.get_key(metrics.labeled_counter.pdfjs_editing_highlight_kind, &quot;highlight&quot;)) &gt; 0, FALSE)
+)
+</code></pre>
+
+</details>
+
+<hr />
 <h3 id="pdf_opening"><code>pdf_opening</code></h3>
 <hr />
 <p>Analysis Period: <code>weekly</code>, <code>overall</code></p>
@@ -2251,7 +2313,9 @@
     (COALESCE(SUM(mozfun.map.get_key(metrics.labeled_counter.pdfjs_editing, &quot;freetext&quot;)) &gt; 0, FALSE) OR
     COALESCE(SUM(mozfun.map.get_key(metrics.labeled_counter.pdfjs_editing, &quot;ink&quot;)) &gt; 0, FALSE)) AND
     (COALESCE(SUM(mozfun.map.get_key(metrics.labeled_counter.pdfjs_editing, &quot;print&quot;)) &gt; 0, FALSE) OR
-    COALESCE(SUM(mozfun.map.get_key(metrics.labeled_counter.pdfjs_editing, &quot;save&quot;)) &gt; 0, FALSE))
+    COALESCE(SUM(mozfun.map.get_key(metrics.labeled_counter.pdfjs_editing, &quot;save&quot;)) &gt; 0, FALSE)) AND
+    (COALESCE(SUM(mozfun.map.get_key(metrics.labeled_counter.pdfjs_editing_highlight_kind, &quot;highlight&quot;)) &gt; 0, FALSE) OR
+    COALESCE(SUM(mozfun.map.get_key(metrics.labeled_counter.pdfjs_editing_highlight_kind, &quot;free_highlight&quot;)) &gt; 0, FALSE))
 )
 </code></pre>
 

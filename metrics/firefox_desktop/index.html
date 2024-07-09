@@ -2318,6 +2318,20 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#pdf_highlight" class="md-nav__link">
+    pdf_highlight
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf_free_highlight" class="md-nav__link">
+    pdf_free_highlight
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#repeat_first_month_user" class="md-nav__link">
     repeat_first_month_user
   </a>
@@ -4477,6 +4491,20 @@
           <li class="md-nav__item">
   <a href="#pdf_opening" class="md-nav__link">
     pdf_opening
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf_highlight" class="md-nav__link">
+    pdf_highlight
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf_free_highlight" class="md-nav__link">
+    pdf_free_highlight
   </a>
   
 </li>
@@ -7090,7 +7118,9 @@ a wallpaper.</p>
     (COALESCE(SUM(mozfun.map.get_key(metrics.labeled_counter.pdfjs_editing, &quot;freetext&quot;)) &gt; 0, FALSE) OR
     COALESCE(SUM(mozfun.map.get_key(metrics.labeled_counter.pdfjs_editing, &quot;ink&quot;)) &gt; 0, FALSE)) AND
     (COALESCE(SUM(mozfun.map.get_key(metrics.labeled_counter.pdfjs_editing, &quot;print&quot;)) &gt; 0, FALSE) OR
-    COALESCE(SUM(mozfun.map.get_key(metrics.labeled_counter.pdfjs_editing, &quot;save&quot;)) &gt; 0, FALSE))
+    COALESCE(SUM(mozfun.map.get_key(metrics.labeled_counter.pdfjs_editing, &quot;save&quot;)) &gt; 0, FALSE)) AND
+    (COALESCE(SUM(mozfun.map.get_key(metrics.labeled_counter.pdfjs_editing_highlight_kind, &quot;highlight&quot;)) &gt; 0, FALSE) OR
+    COALESCE(SUM(mozfun.map.get_key(metrics.labeled_counter.pdfjs_editing_highlight_kind, &quot;free_highlight&quot;)) &gt; 0, FALSE))
 )
 </code></pre>
 
@@ -7161,6 +7191,34 @@ a wallpaper.</p>
 
 <pre><code class="language-sql">(
     COALESCE(SUM(metrics.counter.pdfjs_used) &gt; 0, FALSE)
+)
+</code></pre>
+
+</details>
+
+<hr />
+<h3 id="pdf_highlight">pdf_highlight</h3>
+<p>Data Source: <a href="https://mozilla.github.io/metric-hub/data_sources/firefox_desktop/#metrics"><code>metrics</code></a></p>
+<details>
+<summary>Definition:</summary>
+
+
+<pre><code class="language-sql">(
+    COALESCE(SUM(mozfun.map.get_key(metrics.labeled_counter.pdfjs_editing_highlight_kind, &quot;highlight&quot;)) &gt; 0, FALSE)
+)
+</code></pre>
+
+</details>
+
+<hr />
+<h3 id="pdf_free_highlight">pdf_free_highlight</h3>
+<p>Data Source: <a href="https://mozilla.github.io/metric-hub/data_sources/firefox_desktop/#metrics"><code>metrics</code></a></p>
+<details>
+<summary>Definition:</summary>
+
+
+<pre><code class="language-sql">(
+    COALESCE(SUM(mozfun.map.get_key(metrics.labeled_counter.pdfjs_editing_highlight_kind, &quot;free_highlight&quot;)) &gt; 0, FALSE)
 )
 </code></pre>
 
