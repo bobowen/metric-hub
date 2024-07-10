@@ -769,6 +769,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../outcomes/firefox_desktop/pdf_handler/" class="md-nav__link">
+        Pdf handler
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../outcomes/firefox_desktop/picture_in_picture/" class="md-nav__link">
         Picture in picture
       </a>
@@ -2327,6 +2341,27 @@
           <li class="md-nav__item">
   <a href="#pdf_free_highlight" class="md-nav__link">
     pdf_free_highlight
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf_invoked_to_handle" class="md-nav__link">
+    pdf_invoked_to_handle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf_launched_to_handle" class="md-nav__link">
+    pdf_launched_to_handle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf_launched_or_invoked_to_handle" class="md-nav__link">
+    pdf_launched_or_invoked_to_handle
   </a>
   
 </li>
@@ -4505,6 +4540,27 @@
           <li class="md-nav__item">
   <a href="#pdf_free_highlight" class="md-nav__link">
     pdf_free_highlight
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf_invoked_to_handle" class="md-nav__link">
+    pdf_invoked_to_handle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf_launched_to_handle" class="md-nav__link">
+    pdf_launched_to_handle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf_launched_or_invoked_to_handle" class="md-nav__link">
+    pdf_launched_or_invoked_to_handle
   </a>
   
 </li>
@@ -7220,6 +7276,49 @@ a wallpaper.</p>
 <pre><code class="language-sql">(
     COALESCE(SUM(mozfun.map.get_key(metrics.labeled_counter.pdfjs_editing_highlight_kind, &quot;free_highlight&quot;)) &gt; 0, FALSE)
 )
+</code></pre>
+
+</details>
+
+<hr />
+<h3 id="pdf_invoked_to_handle">pdf_invoked_to_handle</h3>
+<p><strong>PDF Invoked to Handle</strong></p>
+<p>Firefox was invoked (i.e., was already running and was not launched) to handle a pdf file</p>
+<p>Data Source: <a href="https://mozilla.github.io/metric-hub/data_sources/firefox_desktop/#main"><code>main</code></a></p>
+<details>
+<summary>Definition:</summary>
+
+
+<pre><code class="language-sql">COALESCE(SUM(mozfun.map.get_key(payload.processes.parent.keyed_scalars.os_environment_invoked_to_handle, '.pdf')), 0)
+</code></pre>
+
+</details>
+
+<hr />
+<h3 id="pdf_launched_to_handle">pdf_launched_to_handle</h3>
+<p><strong>PDF Launched to Handle</strong></p>
+<p>Firefox was launched afresh (i.e., was not already running) to handle a pdf file</p>
+<p>Data Source: <a href="https://mozilla.github.io/metric-hub/data_sources/firefox_desktop/#main"><code>main</code></a></p>
+<details>
+<summary>Definition:</summary>
+
+
+<pre><code class="language-sql">COALESCE(SUM(mozfun.map.get_key(payload.processes.parent.keyed_scalars.os_environment_launched_to_handle, '.pdf')), 0)
+</code></pre>
+
+</details>
+
+<hr />
+<h3 id="pdf_launched_or_invoked_to_handle">pdf_launched_or_invoked_to_handle</h3>
+<p><strong>PDF Launched or Invoked</strong></p>
+<p>Firefox was launched or invoked to handle a pdf file</p>
+<p>Data Source: <a href="https://mozilla.github.io/metric-hub/data_sources/firefox_desktop/#main"><code>main</code></a></p>
+<details>
+<summary>Definition:</summary>
+
+
+<pre><code class="language-sql">COALESCE(SUM(mozfun.map.get_key(payload.processes.parent.keyed_scalars.os_environment_invoked_to_handle, '.pdf')), 0) +
+    COALESCE(SUM(mozfun.map.get_key(payload.processes.parent.keyed_scalars.os_environment_launched_to_handle, '.pdf')), 0)
 </code></pre>
 
 </details>
