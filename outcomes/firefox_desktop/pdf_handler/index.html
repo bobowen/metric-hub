@@ -2135,7 +2135,9 @@
 <summary>Definition:</summary>
 
 
-<pre><code class="language-sql">COALESCE(SUM(mozfun.map.get_key(payload.processes.parent.keyed_scalars.os_environment_launched_to_handle, '.pdf')), 0)
+<pre><code class="language-sql">(
+    COALESCE(SUM(mozfun.map.get_key(payload.processes.parent.keyed_scalars.os_environment_launched_to_handle, '.pdf')) &gt; 0, FALSE)
+)
 </code></pre>
 
 </details>
@@ -2151,7 +2153,9 @@
 <summary>Definition:</summary>
 
 
-<pre><code class="language-sql">COALESCE(SUM(mozfun.map.get_key(payload.processes.parent.keyed_scalars.os_environment_invoked_to_handle, '.pdf')), 0)
+<pre><code class="language-sql">(
+    COALESCE(SUM(mozfun.map.get_key(payload.processes.parent.keyed_scalars.os_environment_invoked_to_handle, '.pdf')) &gt; 0, FALSE)
+)
 </code></pre>
 
 </details>
@@ -2167,8 +2171,10 @@
 <summary>Definition:</summary>
 
 
-<pre><code class="language-sql">COALESCE(SUM(mozfun.map.get_key(payload.processes.parent.keyed_scalars.os_environment_invoked_to_handle, '.pdf')), 0) +
-    COALESCE(SUM(mozfun.map.get_key(payload.processes.parent.keyed_scalars.os_environment_launched_to_handle, '.pdf')), 0)
+<pre><code class="language-sql">(
+    (COALESCE(SUM(mozfun.map.get_key(payload.processes.parent.keyed_scalars.os_environment_invoked_to_handle, '.pdf')) &gt; 0, FALSE) OR 
+    COALESCE(SUM(mozfun.map.get_key(payload.processes.parent.keyed_scalars.os_environment_launched_to_handle, '.pdf')) &gt; 0, FALSE))
+)
 </code></pre>
 
 </details>
