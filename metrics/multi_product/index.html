@@ -2197,7 +2197,7 @@
 <h3 id="mobile_daily_active_users_v1">mobile_daily_active_users_v1</h3>
 <p><strong>Mobile DAU</strong></p>
 <p>This is the official DAU reporting definition. The logic is
-    <a href="https://github.com/mozilla/bigquery-etl/tree/main/sql_generators/active_users/templates">defined in <code>bigquery-etl</code></a>
+    <a href="https://mozilla-hub.atlassian.net/wiki/spaces/DATA/pages/314704478/Daily+Active+Users+DAU+Metric">detailed on the Confluence DAU page</a>
     and is automatically cross-checked, actively monitored, and change controlled.
     Whenever possible, this is the preferred DAU reporting definition to use for Mobile products.
     This metric needs to be aggregated by <code>submission_date</code>. If it is not aggregated by <code>submission_date</code>,
@@ -2205,7 +2205,7 @@
 <pre><code>For more information, refer to [the DAU description in Confluence](https://mozilla-hub.atlassian.net/wiki/spaces/DATA/pages/314704478/Daily+Active+Users+DAU+Metric).
 For questions please contact bochocki@mozilla.com or firefox-kpi@mozilla.com.
 </code></pre>
-<p>Data Source: <a href="https://mozilla.github.io/metric-hub/data_sources/multi_product/#mobile_active_users_aggregates_v1"><code>mobile_active_users_aggregates_v1</code></a></p>
+<p>Data Source: <a href="https://mozilla.github.io/metric-hub/data_sources/multi_product/#mobile_active_users_aggregates_view"><code>mobile_active_users_aggregates_view</code></a></p>
 <details>
 <summary>Definition:</summary>
 
@@ -2219,15 +2219,15 @@ For questions please contact bochocki@mozilla.com or firefox-kpi@mozilla.com.
 <h3 id="mobile_dau_kpi_v1">mobile_dau_kpi_v1</h3>
 <p><strong>Mobile DAU KPI</strong></p>
 <p>The average <a href="https://mozilla.github.io/metric-hub/metrics/multi_product/#mobile_daily_active_users">Mobile DAU</a> in the 28-day period ending on December 15th. This is the official
-    Mobile DAU KPI reporting definition. The logic for calculating DAU is
-    <a href="https://github.com/mozilla/bigquery-etl/tree/main/sql_generators/active_users/templates">defined in <code>bigquery-etl</code></a>
+    Mobile DAU KPI reporting definition. The logic is
+    <a href="https://mozilla-hub.atlassian.net/wiki/spaces/DATA/pages/314704478/Daily+Active+Users+DAU+Metric">detailed on the Confluence DAU page</a>
     and is automatically cross-checked, actively monitored, and change controlled.
     To reconstruct the annual Mobile DAU KPI, this metric needs to be aggregated by
     <code>EXTRACT(YEAR FROM submission_date)</code>.  </p>
 <pre><code>For more information, refer to [the DAU description in Confluence](https://mozilla-hub.atlassian.net/wiki/spaces/DATA/pages/314704478/Daily+Active+Users+DAU+Metric).
 For questions please contact bochocki@mozilla.com or firefox-kpi@mozilla.com.
 </code></pre>
-<p>Data Source: <a href="https://mozilla.github.io/metric-hub/data_sources/multi_product/#mobile_active_users_aggregates_v1"><code>mobile_active_users_aggregates_v1</code></a></p>
+<p>Data Source: <a href="https://mozilla.github.io/metric-hub/data_sources/multi_product/#mobile_active_users_aggregates_view"><code>mobile_active_users_aggregates_view</code></a></p>
 <details>
 <summary>Definition:</summary>
 
