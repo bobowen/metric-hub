@@ -1418,6 +1418,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#firefox_ios_engagement_view" class="md-nav__link">
+    firefox_ios_engagement_view
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firefox_ios_retention_view" class="md-nav__link">
+    firefox_ios_retention_view
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2157,6 +2171,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#firefox_ios_engagement_view" class="md-nav__link">
+    firefox_ios_engagement_view
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firefox_ios_retention_view" class="md-nav__link">
+    firefox_ios_retention_view
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2396,6 +2424,40 @@ GROUP BY 1, 2, 3, 4, 5, 6
 <pre><code class="language-sql">(
     SELECT *
      FROM `mozdata.firefox_ios.funnel_retention_week_4`
+)
+</code></pre>
+
+</details>
+
+<hr />
+<h3 id="firefox_ios_engagement_view"><a href="#firefox_ios_engagement_view">firefox_ios_engagement_view</a></h3>
+<p>Client ID column: <code>NULL</code></p>
+<p>Submission Date column: <code>submission_date</code></p>
+<details>
+<summary>Definition:</summary>
+
+
+<pre><code class="language-sql">(
+    SELECT *
+     FROM `moz-fx-data-shared-prod.firefox_ios.engagement`
+    WHERE is_mobile
+)
+</code></pre>
+
+</details>
+
+<hr />
+<h3 id="firefox_ios_retention_view"><a href="#firefox_ios_retention_view">firefox_ios_retention_view</a></h3>
+<p>Client ID column: <code>NULL</code></p>
+<p>Submission Date column: <code>metric_date</code></p>
+<details>
+<summary>Definition:</summary>
+
+
+<pre><code class="language-sql">(
+    SELECT *
+     FROM `moz-fx-data-shared-prod.firefox_ios.retention`
+    WHERE is_mobile
 )
 </code></pre>
 

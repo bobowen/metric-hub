@@ -1418,6 +1418,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#focus_ios_engagement_view" class="md-nav__link">
+    focus_ios_engagement_view
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#focus_ios_retention_view" class="md-nav__link">
+    focus_ios_retention_view
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2101,6 +2115,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#focus_ios_engagement_view" class="md-nav__link">
+    focus_ios_engagement_view
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#focus_ios_retention_view" class="md-nav__link">
+    focus_ios_retention_view
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2229,6 +2257,40 @@
     FROM `mozdata.search.mobile_search_clients_engines_sources_daily`
     WHERE normalized_app_name_os = 'Focus iOS'
  )
+</code></pre>
+
+</details>
+
+<hr />
+<h3 id="focus_ios_engagement_view"><a href="#focus_ios_engagement_view">focus_ios_engagement_view</a></h3>
+<p>Client ID column: <code>NULL</code></p>
+<p>Submission Date column: <code>submission_date</code></p>
+<details>
+<summary>Definition:</summary>
+
+
+<pre><code class="language-sql">(
+    SELECT *
+     FROM `moz-fx-data-shared-prod.focus_ios.engagement`
+    WHERE is_mobile
+)
+</code></pre>
+
+</details>
+
+<hr />
+<h3 id="focus_ios_retention_view"><a href="#focus_ios_retention_view">focus_ios_retention_view</a></h3>
+<p>Client ID column: <code>NULL</code></p>
+<p>Submission Date column: <code>metric_date</code></p>
+<details>
+<summary>Definition:</summary>
+
+
+<pre><code class="language-sql">(
+    SELECT *
+     FROM `moz-fx-data-shared-prod.focus_ios.retention`
+    WHERE is_mobile
+)
 </code></pre>
 
 </details>

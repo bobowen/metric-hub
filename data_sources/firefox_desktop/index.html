@@ -1523,6 +1523,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#desktop_engagement_view" class="md-nav__link">
+    desktop_engagement_view
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desktop_retention_view" class="md-nav__link">
+    desktop_retention_view
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2395,6 +2409,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#desktop_engagement_view" class="md-nav__link">
+    desktop_engagement_view
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desktop_retention_view" class="md-nav__link">
+    desktop_retention_view
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2847,6 +2875,40 @@
 
 
 <pre><code class="language-sql">`moz-fx-data-shared-prod.telemetry.desktop_cohort_daily_retention`
+</code></pre>
+
+</details>
+
+<hr />
+<h3 id="desktop_engagement_view"><a href="#desktop_engagement_view">desktop_engagement_view</a></h3>
+<p>Client ID column: <code>NULL</code></p>
+<p>Submission Date column: <code>submission_date</code></p>
+<details>
+<summary>Definition:</summary>
+
+
+<pre><code class="language-sql">(
+    SELECT *
+     FROM `moz-fx-data-shared-prod.telemetry.desktop_engagement`
+    WHERE is_desktop
+)
+</code></pre>
+
+</details>
+
+<hr />
+<h3 id="desktop_retention_view"><a href="#desktop_retention_view">desktop_retention_view</a></h3>
+<p>Client ID column: <code>NULL</code></p>
+<p>Submission Date column: <code>metric_date</code></p>
+<details>
+<summary>Definition:</summary>
+
+
+<pre><code class="language-sql">(
+    SELECT *
+     FROM `moz-fx-data-shared-prod.telemetry.desktop_retention`
+    WHERE is_desktop
+)
 </code></pre>
 
 </details>
