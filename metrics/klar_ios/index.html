@@ -1323,6 +1323,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#client_level_daily_active_users_v1" class="md-nav__link">
+    client_level_daily_active_users_v1
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2241,6 +2248,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#client_level_daily_active_users_v1" class="md-nav__link">
+    client_level_daily_active_users_v1
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2504,6 +2518,24 @@
 
 
 <pre><code class="language-sql">SUM(retained_week_4_new_profiles) / SUM(new_profiles_metric_date)
+</code></pre>
+
+</details>
+
+<hr />
+<h3 id="client_level_daily_active_users_v1">client_level_daily_active_users_v1</h3>
+<p><strong>Klar iOS Client-Level DAU</strong></p>
+<p>Client-level DAU. The logic is
+    <a href="https://mozilla-hub.atlassian.net/wiki/spaces/DATA/pages/314704478/Daily+Active+Users+DAU+Metric">detailed on the Confluence DAU page</a>
+    and is automatically cross-checked, actively monitored, and change controlled.
+    This metric needs to be aggregated by <code>submission_date</code>. If it is not aggregated by <code>submission_date</code>, it is
+    similar to a "days of use" metric, and not DAU.</p>
+<p>Data Source: <a href="https://mozilla.github.io/metric-hub/data_sources/klar_ios/#klar_ios_active_users_view"><code>klar_ios_active_users_view</code></a></p>
+<details>
+<summary>Definition:</summary>
+
+
+<pre><code class="language-sql">COUNTIF(is_dau)
 </code></pre>
 
 </details>

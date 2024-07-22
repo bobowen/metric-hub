@@ -1289,6 +1289,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#client_level_daily_active_users_v2" class="md-nav__link">
+    client_level_daily_active_users_v2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#desktop_dau_kpi" class="md-nav__link">
     desktop_dau_kpi
   </a>
@@ -3509,6 +3516,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#client_level_daily_active_users_v2" class="md-nav__link">
+    client_level_daily_active_users_v2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#desktop_dau_kpi" class="md-nav__link">
     desktop_dau_kpi
   </a>
@@ -5100,6 +5114,24 @@ For questions please contact bochocki@mozilla.com or firefox-kpi@mozilla.com.
 
 
 <pre><code class="language-sql">COUNTIF(active_hours_sum &gt; 0 AND total_uri_count &gt; 0 AND isp_name &lt;&gt; 'BrowserStack')
+</code></pre>
+
+</details>
+
+<hr />
+<h3 id="client_level_daily_active_users_v2">client_level_daily_active_users_v2</h3>
+<p><strong>Firefox Desktop Client-Level DAU</strong></p>
+<p>Client-level DAU. The logic is
+    <a href="https://mozilla-hub.atlassian.net/wiki/spaces/DATA/pages/314704478/Daily+Active+Users+DAU+Metric">detailed on the Confluence DAU page</a>
+    and is automatically cross-checked, actively monitored, and change controlled.
+    This metric needs to be aggregated by <code>submission_date</code>. If it is not aggregated by <code>submission_date</code>, it is
+    similar to a "days of use" metric, and not DAU.</p>
+<p>Data Source: <a href="https://mozilla.github.io/metric-hub/data_sources/firefox_desktop/#firefox_desktop_active_users_view"><code>firefox_desktop_active_users_view</code></a></p>
+<details>
+<summary>Definition:</summary>
+
+
+<pre><code class="language-sql">COUNTIF(is_dau)
 </code></pre>
 
 </details>

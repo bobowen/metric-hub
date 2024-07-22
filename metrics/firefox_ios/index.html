@@ -1205,6 +1205,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#client_level_daily_active_users_v3" class="md-nav__link">
+    client_level_daily_active_users_v3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#organic_search_count" class="md-nav__link">
     organic_search_count
   </a>
@@ -2312,6 +2319,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#client_level_daily_active_users_v3" class="md-nav__link">
+    client_level_daily_active_users_v3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#organic_search_count" class="md-nav__link">
     organic_search_count
   </a>
@@ -2655,6 +2669,24 @@ For questions please contact bochocki@mozilla.com or firefox-kpi@mozilla.com.
                          AND LOWER(metadata.isp.name) != 'browserstack'
                         THEN client_info.client_id
                         ELSE NULL END)
+</code></pre>
+
+</details>
+
+<hr />
+<h3 id="client_level_daily_active_users_v3">client_level_daily_active_users_v3</h3>
+<p><strong>Firefox iOS Client-Level DAU</strong></p>
+<p>Client-level DAU. The logic is
+    <a href="https://mozilla-hub.atlassian.net/wiki/spaces/DATA/pages/314704478/Daily+Active+Users+DAU+Metric">detailed on the Confluence DAU page</a>
+    and is automatically cross-checked, actively monitored, and change controlled.
+    This metric needs to be aggregated by <code>submission_date</code>. If it is not aggregated by <code>submission_date</code>, it is
+    similar to a "days of use" metric, and not DAU.</p>
+<p>Data Source: <a href="https://mozilla.github.io/metric-hub/data_sources/firefox_ios/#firefox_ios_active_users_view"><code>firefox_ios_active_users_view</code></a></p>
+<details>
+<summary>Definition:</summary>
+
+
+<pre><code class="language-sql">COUNTIF(is_dau)
 </code></pre>
 
 </details>

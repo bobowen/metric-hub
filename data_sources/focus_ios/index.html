@@ -1432,6 +1432,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#focus_ios_active_users_view" class="md-nav__link">
+    focus_ios_active_users_view
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2129,6 +2136,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#focus_ios_active_users_view" class="md-nav__link">
+    focus_ios_active_users_view
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2289,6 +2303,23 @@
 <pre><code class="language-sql">(
     SELECT *
      FROM `moz-fx-data-shared-prod.focus_ios.retention`
+    WHERE is_mobile
+)
+</code></pre>
+
+</details>
+
+<hr />
+<h3 id="focus_ios_active_users_view"><a href="#focus_ios_active_users_view">focus_ios_active_users_view</a></h3>
+<p>Client ID column: <code>client_id</code></p>
+<p>Submission Date column: <code>submission_date</code></p>
+<details>
+<summary>Definition:</summary>
+
+
+<pre><code class="language-sql">(
+    SELECT *
+     FROM `moz-fx-data-shared-prod.focus_ios.active_users`
     WHERE is_mobile
 )
 </code></pre>

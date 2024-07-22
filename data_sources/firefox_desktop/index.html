@@ -1537,6 +1537,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#firefox_desktop_active_users_view" class="md-nav__link">
+    firefox_desktop_active_users_view
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2423,6 +2430,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#firefox_desktop_active_users_view" class="md-nav__link">
+    firefox_desktop_active_users_view
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2907,6 +2921,23 @@
 <pre><code class="language-sql">(
     SELECT *
      FROM `moz-fx-data-shared-prod.telemetry.desktop_retention`
+    WHERE is_desktop
+)
+</code></pre>
+
+</details>
+
+<hr />
+<h3 id="firefox_desktop_active_users_view"><a href="#firefox_desktop_active_users_view">firefox_desktop_active_users_view</a></h3>
+<p>Client ID column: <code>client_id</code></p>
+<p>Submission Date column: <code>submission_date</code></p>
+<details>
+<summary>Definition:</summary>
+
+
+<pre><code class="language-sql">(
+    SELECT *
+     FROM `moz-fx-data-shared-prod.telemetry.desktop_active_users`
     WHERE is_desktop
 )
 </code></pre>

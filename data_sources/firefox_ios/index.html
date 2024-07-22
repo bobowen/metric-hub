@@ -1432,6 +1432,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#firefox_ios_active_users_view" class="md-nav__link">
+    firefox_ios_active_users_view
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2185,6 +2192,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#firefox_ios_active_users_view" class="md-nav__link">
+    firefox_ios_active_users_view
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2457,6 +2471,23 @@ GROUP BY 1, 2, 3, 4, 5, 6
 <pre><code class="language-sql">(
     SELECT *
      FROM `moz-fx-data-shared-prod.firefox_ios.retention`
+    WHERE is_mobile
+)
+</code></pre>
+
+</details>
+
+<hr />
+<h3 id="firefox_ios_active_users_view"><a href="#firefox_ios_active_users_view">firefox_ios_active_users_view</a></h3>
+<p>Client ID column: <code>client_id</code></p>
+<p>Submission Date column: <code>submission_date</code></p>
+<details>
+<summary>Definition:</summary>
+
+
+<pre><code class="language-sql">(
+    SELECT *
+     FROM `moz-fx-data-shared-prod.firefox_ios.active_users`
     WHERE is_mobile
 )
 </code></pre>
