@@ -1422,6 +1422,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#fx_urlbar_quick_suggest_remote_settings_latency_ms" class="md-nav__link">
+    fx_urlbar_quick_suggest_remote_settings_latency_ms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#fx_new_window_ms" class="md-nav__link">
     fx_new_window_ms
   </a>
@@ -3649,6 +3656,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#fx_urlbar_quick_suggest_remote_settings_latency_ms" class="md-nav__link">
+    fx_urlbar_quick_suggest_remote_settings_latency_ms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#fx_new_window_ms" class="md-nav__link">
     fx_new_window_ms
   </a>
@@ -5410,6 +5424,20 @@ For questions please contact bochocki@mozilla.com or firefox-kpi@mozilla.com.
 
 
 <pre><code class="language-sql">ARRAY_AGG(mozfun.hist.extract(payload.histograms.content_frame_time_vsync) IGNORE NULLS)
+</code></pre>
+
+</details>
+
+<hr />
+<h3 id="fx_urlbar_quick_suggest_remote_settings_latency_ms">fx_urlbar_quick_suggest_remote_settings_latency_ms</h3>
+<p><strong>Firefox Suggest Remote Settings Latency Ms</strong></p>
+<p>The time from when Firefox starts fetching a suggestion from remote settings to the time the suggestion is retrieved.</p>
+<p>Data Source: <a href="https://mozilla.github.io/metric-hub/data_sources/firefox_desktop/#main"><code>main</code></a></p>
+<details>
+<summary>Definition:</summary>
+
+
+<pre><code class="language-sql">ARRAY_AGG(mozfun.hist.extract(payload.histograms.fx_urlbar_quick_suggest_remote_settings_latency_ms) IGNORE NULLS)
 </code></pre>
 
 </details>
