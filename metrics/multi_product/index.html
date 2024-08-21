@@ -2202,9 +2202,6 @@
     Whenever possible, this is the preferred DAU reporting definition to use for Mobile products.
     This metric needs to be aggregated by <code>submission_date</code>. If it is not aggregated by <code>submission_date</code>,
     it is similar to a "days of use" metric, and not DAU.</p>
-<pre><code>For more information, refer to [the DAU description in Confluence](https://mozilla-hub.atlassian.net/wiki/spaces/DATA/pages/314704478/Daily+Active+Users+DAU+Metric).
-For questions please contact bochocki@mozilla.com or firefox-kpi@mozilla.com.
-</code></pre>
 <p>Data Source: <a href="https://mozilla.github.io/metric-hub/data_sources/multi_product/#mobile_active_users_aggregates_view"><code>mobile_active_users_aggregates_view</code></a></p>
 <details>
 <summary>Definition:</summary>
@@ -2218,15 +2215,12 @@ For questions please contact bochocki@mozilla.com or firefox-kpi@mozilla.com.
 <hr />
 <h3 id="mobile_dau_kpi_v1">mobile_dau_kpi_v1</h3>
 <p><strong>Mobile DAU KPI</strong></p>
-<p>The average <a href="https://mozilla.github.io/metric-hub/metrics/multi_product/#mobile_daily_active_users">Mobile DAU</a> in the 28-day period ending on December 15th. This is the official
-    Mobile DAU KPI reporting definition. The logic is
+<p>The average <a href="https://mozilla.acryl.io/glossaryTerm/urn:li:glossaryTerm:Metric%20Hub.multi_product.mobile_daily_active_users_v1/Documentation?is_lineage_mode=false">Mobile DAU</a>
+    in the 28-day period ending on December 15th. This is the official Mobile DAU KPI reporting definition. The logic is
     <a href="https://mozilla-hub.atlassian.net/wiki/spaces/DATA/pages/314704478/Daily+Active+Users+DAU+Metric">detailed on the Confluence DAU page</a>
     and is automatically cross-checked, actively monitored, and change controlled.
     To reconstruct the annual Mobile DAU KPI, this metric needs to be aggregated by
-    <code>EXTRACT(YEAR FROM submission_date)</code>.  </p>
-<pre><code>For more information, refer to [the DAU description in Confluence](https://mozilla-hub.atlassian.net/wiki/spaces/DATA/pages/314704478/Daily+Active+Users+DAU+Metric).
-For questions please contact bochocki@mozilla.com or firefox-kpi@mozilla.com.
-</code></pre>
+    <code>EXTRACT(YEAR FROM submission_date)</code>.</p>
 <p>Data Source: <a href="https://mozilla.github.io/metric-hub/data_sources/multi_product/#mobile_active_users_aggregates_view"><code>mobile_active_users_aggregates_view</code></a></p>
 <details>
 <summary>Definition:</summary>
