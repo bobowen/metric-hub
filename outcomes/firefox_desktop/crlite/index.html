@@ -17,7 +17,7 @@
     
     
       
-        <title>Networking - Metric Hub</title>
+        <title>Crlite - Metric Hub</title>
       
     
     
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Networking
+              Crlite
             
           </span>
         </div>
@@ -619,11 +619,116 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../crlite/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Crlite
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Crlite
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metrics" class="md-nav__link">
+    Metrics
+  </a>
+  
+    <nav class="md-nav" aria-label="Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crlite_revoked_in_stash" class="md-nav__link">
+    crlite_revoked_in_stash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crlite_revoked_in_filter" class="md-nav__link">
+    crlite_revoked_in_filter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ocsp_use_counter" class="md-nav__link">
+    ocsp_use_counter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crlite_use_counter" class="md-nav__link">
+    crlite_use_counter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#revocation_check_counter" class="md-nav__link">
+    revocation_check_counter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cert_storage_memory" class="md-nav__link">
+    cert_storage_memory
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-sources" class="md-nav__link">
+    Data Sources
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Sources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metrics-glean-metrics" class="md-nav__link">
+    metrics- Glean Metrics
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -675,221 +780,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Networking
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../networking/" class="md-nav__link">
         Networking
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#metrics" class="md-nav__link">
-    Metrics
-  </a>
-  
-    <nav class="md-nav" aria-label="Metrics">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#quic_successful_connections_ech_real" class="md-nav__link">
-    quic_successful_connections_ech_real
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quic_successful_connections_ech_grease" class="md-nav__link">
-    quic_successful_connections_ech_grease
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quic_successful_connections_no_ech" class="md-nav__link">
-    quic_successful_connections_no_ech
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tls_successful_conservative_connections" class="md-nav__link">
-    tls_successful_conservative_connections
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tls_successful_first_try_connections" class="md-nav__link">
-    tls_successful_first_try_connections
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tls_successful_connections_with_ech_grease" class="md-nav__link">
-    tls_successful_connections_with_ech_grease
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tls_successful_connections_with_ech" class="md-nav__link">
-    tls_successful_connections_with_ech
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tls_successful_connections_overall" class="md-nav__link">
-    tls_successful_connections_overall
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tls_failed_cert_validation_time" class="md-nav__link">
-    tls_failed_cert_validation_time
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tls_successful_cert_validation_time" class="md-nav__link">
-    tls_successful_cert_validation_time
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#http_channels_success" class="md-nav__link">
-    http_channels_success
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#http_pageloads_using_tls" class="md-nav__link">
-    http_pageloads_using_tls
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#http_transactions_using_tls" class="md-nav__link">
-    http_transactions_using_tls
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cert_error_page_clicked" class="md-nav__link">
-    cert_error_page_clicked
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cert_error_page_loaded" class="md-nav__link">
-    cert_error_page_loaded
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#time_to_response_start_ms" class="md-nav__link">
-    time_to_response_start_ms
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#http_page_open_to_first_sent" class="md-nav__link">
-    http_page_open_to_first_sent
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#http_sub_tls_handshake" class="md-nav__link">
-    http_sub_tls_handshake
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#http_page_tls_handshake" class="md-nav__link">
-    http_page_tls_handshake
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dns_lookup_time" class="md-nav__link">
-    dns_lookup_time
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data-sources" class="md-nav__link">
-    Data Sources
-  </a>
-  
-    <nav class="md-nav" aria-label="Data Sources">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#main" class="md-nav__link">
-    main
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#events_certerror-certerror-events" class="md-nav__link">
-    events_certerror- Certerror events
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2201,141 +2096,43 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#quic_successful_connections_ech_real" class="md-nav__link">
-    quic_successful_connections_ech_real
+  <a href="#crlite_revoked_in_stash" class="md-nav__link">
+    crlite_revoked_in_stash
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#quic_successful_connections_ech_grease" class="md-nav__link">
-    quic_successful_connections_ech_grease
+  <a href="#crlite_revoked_in_filter" class="md-nav__link">
+    crlite_revoked_in_filter
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#quic_successful_connections_no_ech" class="md-nav__link">
-    quic_successful_connections_no_ech
+  <a href="#ocsp_use_counter" class="md-nav__link">
+    ocsp_use_counter
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#tls_successful_conservative_connections" class="md-nav__link">
-    tls_successful_conservative_connections
+  <a href="#crlite_use_counter" class="md-nav__link">
+    crlite_use_counter
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#tls_successful_first_try_connections" class="md-nav__link">
-    tls_successful_first_try_connections
+  <a href="#revocation_check_counter" class="md-nav__link">
+    revocation_check_counter
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#tls_successful_connections_with_ech_grease" class="md-nav__link">
-    tls_successful_connections_with_ech_grease
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tls_successful_connections_with_ech" class="md-nav__link">
-    tls_successful_connections_with_ech
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tls_successful_connections_overall" class="md-nav__link">
-    tls_successful_connections_overall
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tls_failed_cert_validation_time" class="md-nav__link">
-    tls_failed_cert_validation_time
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tls_successful_cert_validation_time" class="md-nav__link">
-    tls_successful_cert_validation_time
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#http_channels_success" class="md-nav__link">
-    http_channels_success
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#http_pageloads_using_tls" class="md-nav__link">
-    http_pageloads_using_tls
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#http_transactions_using_tls" class="md-nav__link">
-    http_transactions_using_tls
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cert_error_page_clicked" class="md-nav__link">
-    cert_error_page_clicked
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cert_error_page_loaded" class="md-nav__link">
-    cert_error_page_loaded
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#time_to_response_start_ms" class="md-nav__link">
-    time_to_response_start_ms
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#http_page_open_to_first_sent" class="md-nav__link">
-    http_page_open_to_first_sent
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#http_sub_tls_handshake" class="md-nav__link">
-    http_sub_tls_handshake
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#http_page_tls_handshake" class="md-nav__link">
-    http_page_tls_handshake
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dns_lookup_time" class="md-nav__link">
-    dns_lookup_time
+  <a href="#cert_storage_memory" class="md-nav__link">
+    cert_storage_memory
   </a>
   
 </li>
@@ -2354,15 +2151,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#main" class="md-nav__link">
-    main
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#events_certerror-certerror-events" class="md-nav__link">
-    events_certerror- Certerror events
+  <a href="#metrics-glean-metrics" class="md-nav__link">
+    metrics- Glean Metrics
   </a>
   
 </li>
@@ -2386,391 +2176,110 @@
                 
 
 
-  <h1>Networking</h1>
+  <h1>Crlite</h1>
 
-<p>Network layer metrics including Necko, TLS, NSS</p>
-<p><a href="https://github.com/mozilla/metric-hub/blob/main/jetstream/outcomes/firefox_desktop/networking.toml">Source</a>  |  <a href="https://github.com/mozilla/metric-hub/edit/main/jetstream/outcomes/firefox_desktop/networking.toml">Edit</a></p>
+<p>Metrics for the CRLite certificate revocation checking system</p>
+<p><a href="https://github.com/mozilla/metric-hub/blob/main/jetstream/outcomes/firefox_desktop/crlite.toml">Source</a>  |  <a href="https://github.com/mozilla/metric-hub/edit/main/jetstream/outcomes/firefox_desktop/crlite.toml">Edit</a></p>
 <h2 id="metrics">Metrics</h2>
-<h3 id="quic_successful_connections_ech_real"><code>quic_successful_connections_ech_real</code></h3>
-<hr />
+<h3 id="crlite_revoked_in_stash"><code>crlite_revoked_in_stash</code></h3>
+<p>**CRLite stash hits **</p>
+<p>Number of revoked certificates detected by a CRLite stash.</p>
 <p>Analysis Period: <code>weekly</code>, <code>overall</code></p>
-<p>Data Source: <a href="#main"><code>main</code></a></p>
-<p>Statistics: <code>empirical_cdf</code>, <code>kernel_density_estimate</code>, <code>deciles</code>, <code>bootstrap_mean</code></p>
+<p>Data Source: <a href="#metrics"><code>metrics</code></a></p>
+<p>Statistics: <code>client_count</code>, <code>sum</code></p>
 <details>
 <summary>Definition:</summary>
 
 
-<pre><code class="language-sql">SAFE_DIVIDE(
-        SUM(mozfun.map.get_key(mozfun.hist.extract(mozfun.map.get_key(payload.keyed_histograms.http3_ech_outcome, 'REAL')).values,0)),
-        SUM(mozfun.hist.threshold_count(mozfun.map.get_key(payload.keyed_histograms.http3_ech_outcome, 'REAL'),1))
-    )
+<pre><code class="language-sql">COALESCE(SUM(mozfun.map.get_key(metrics.labeled_counter.cert_verifier_crlite_status, 'revoked_in_stash')), 0)
 </code></pre>
 
 </details>
 
 <hr />
-<h3 id="quic_successful_connections_ech_grease"><code>quic_successful_connections_ech_grease</code></h3>
-<hr />
+<h3 id="crlite_revoked_in_filter"><code>crlite_revoked_in_filter</code></h3>
+<p>**CRLite filter hits **</p>
+<p>Number of revoked certificates detected by the CRLite filter.</p>
 <p>Analysis Period: <code>weekly</code>, <code>overall</code></p>
-<p>Data Source: <a href="#main"><code>main</code></a></p>
-<p>Statistics: <code>empirical_cdf</code>, <code>kernel_density_estimate</code>, <code>deciles</code>, <code>bootstrap_mean</code></p>
+<p>Data Source: <a href="#metrics"><code>metrics</code></a></p>
+<p>Statistics: <code>client_count</code>, <code>sum</code></p>
 <details>
 <summary>Definition:</summary>
 
 
-<pre><code class="language-sql">SAFE_DIVIDE(
-        SUM(mozfun.map.get_key(mozfun.hist.extract(mozfun.map.get_key(payload.keyed_histograms.http3_ech_outcome, 'GREASE')).values,0)),
-        SUM(mozfun.hist.threshold_count(mozfun.map.get_key(payload.keyed_histograms.http3_ech_outcome, 'GREASE'),1))
-    )
+<pre><code class="language-sql">COALESCE(SUM(mozfun.map.get_key(metrics.labeled_counter.cert_verifier_crlite_status, 'revoked_in_filter')), 0)
 </code></pre>
 
 </details>
 
 <hr />
-<h3 id="quic_successful_connections_no_ech"><code>quic_successful_connections_no_ech</code></h3>
-<hr />
+<h3 id="ocsp_use_counter"><code>ocsp_use_counter</code></h3>
+<p>**OCSP usage **</p>
+<p>Number of revocation checks performed using OCSP.</p>
 <p>Analysis Period: <code>weekly</code>, <code>overall</code></p>
-<p>Data Source: <a href="#main"><code>main</code></a></p>
-<p>Statistics: <code>empirical_cdf</code>, <code>kernel_density_estimate</code>, <code>deciles</code>, <code>bootstrap_mean</code></p>
+<p>Data Source: <a href="#metrics"><code>metrics</code></a></p>
+<p>Statistics: <code>ratio</code>, <code>sum</code></p>
 <details>
 <summary>Definition:</summary>
 
 
-<pre><code class="language-sql">SAFE_DIVIDE(
-        SUM(mozfun.map.get_key(mozfun.hist.extract(mozfun.map.get_key(payload.keyed_histograms.http3_ech_outcome, 'NONE')).values,0)),
-        SUM(mozfun.hist.threshold_count(mozfun.map.get_key(payload.keyed_histograms.http3_ech_outcome, 'NONE'),1))
-    )
+<pre><code class="language-sql">COALESCE(SUM(mozfun.map.get_key(metrics.labeled_counter.cert_verifier_cert_revocation_mechanisms, 'OCSP')), 0)
 </code></pre>
 
 </details>
 
 <hr />
-<h3 id="tls_successful_conservative_connections"><code>tls_successful_conservative_connections</code></h3>
-<hr />
+<h3 id="crlite_use_counter"><code>crlite_use_counter</code></h3>
+<p>**CRLite usage **</p>
+<p>Number of revocation checks performed using CRLite.</p>
 <p>Analysis Period: <code>weekly</code>, <code>overall</code></p>
-<p>Data Source: <a href="#main"><code>main</code></a></p>
-<p>Statistics: <code>empirical_cdf</code>, <code>kernel_density_estimate</code>, <code>deciles</code>, <code>bootstrap_mean</code></p>
+<p>Data Source: <a href="#metrics"><code>metrics</code></a></p>
+<p>Statistics: <code>ratio</code>, <code>sum</code></p>
 <details>
 <summary>Definition:</summary>
 
 
-<pre><code class="language-sql">SAFE_DIVIDE(
-        SUM(mozfun.map.get_key(mozfun.hist.extract(payload.histograms.ssl_handshake_result_conservative).values,0)),
-        SUM(mozfun.hist.threshold_count(payload.histograms.ssl_handshake_result_conservative,1))
-    )
+<pre><code class="language-sql">COALESCE(SUM(mozfun.map.get_key(metrics.labeled_counter.cert_verifier_cert_revocation_mechanisms, 'CRLite')), 0)
 </code></pre>
 
 </details>
 
 <hr />
-<h3 id="tls_successful_first_try_connections"><code>tls_successful_first_try_connections</code></h3>
-<hr />
+<h3 id="revocation_check_counter"><code>revocation_check_counter</code></h3>
+<p>**Certificate revocation checks **</p>
+<p>Number of revocation checks performed.</p>
 <p>Analysis Period: <code>weekly</code>, <code>overall</code></p>
-<p>Data Source: <a href="#main"><code>main</code></a></p>
-<p>Statistics: <code>empirical_cdf</code>, <code>kernel_density_estimate</code>, <code>deciles</code>, <code>bootstrap_mean</code></p>
+<p>Data Source: <a href="#metrics"><code>metrics</code></a></p>
+<p>Statistics: <code>sum</code></p>
 <details>
 <summary>Definition:</summary>
 
 
-<pre><code class="language-sql">SAFE_DIVIDE(
-        SUM(mozfun.map.get_key(mozfun.hist.extract(payload.histograms.ssl_handshake_result_first_try).values,0)),
-        SUM(mozfun.hist.threshold_count(payload.histograms.ssl_handshake_result_first_try,1))
-    )
+<pre><code class="language-sql">COALESCE(SUM(mozfun.map.extract_keyed_scalar_sum(metrics.labeled_counter.cert_verifier_cert_revocation_mechanisms)), 0)
 </code></pre>
 
 </details>
 
 <hr />
-<h3 id="tls_successful_connections_with_ech_grease"><code>tls_successful_connections_with_ech_grease</code></h3>
-<hr />
+<h3 id="cert_storage_memory"><code>cert_storage_memory</code></h3>
+<p>**Certificate storage memory usage (bytes) **</p>
+<p>Heap memory usage of cert_storage::SecurityState. This includes CRLite artifacts and preloaded intermediate certificates.</p>
 <p>Analysis Period: <code>weekly</code>, <code>overall</code></p>
-<p>Data Source: <a href="#main"><code>main</code></a></p>
-<p>Statistics: <code>empirical_cdf</code>, <code>kernel_density_estimate</code>, <code>deciles</code>, <code>bootstrap_mean</code></p>
+<p>Data Source: <a href="#metrics"><code>metrics</code></a></p>
+<p>Statistics: <code>empirical_cdf</code>, <code>deciles</code></p>
 <details>
 <summary>Definition:</summary>
 
 
-<pre><code class="language-sql">SAFE_DIVIDE(
-        SUM(mozfun.map.get_key(mozfun.hist.extract(payload.histograms.ssl_handshake_result_ech_grease).values,0)),
-        SUM(mozfun.hist.threshold_count(payload.histograms.ssl_handshake_result_ech_grease,1))
-    )
-</code></pre>
-
-</details>
-
-<hr />
-<h3 id="tls_successful_connections_with_ech"><code>tls_successful_connections_with_ech</code></h3>
-<hr />
-<p>Analysis Period: <code>weekly</code>, <code>overall</code></p>
-<p>Data Source: <a href="#main"><code>main</code></a></p>
-<p>Statistics: <code>empirical_cdf</code>, <code>kernel_density_estimate</code>, <code>deciles</code>, <code>bootstrap_mean</code></p>
-<details>
-<summary>Definition:</summary>
-
-
-<pre><code class="language-sql">SAFE_DIVIDE(
-        SUM(mozfun.map.get_key(mozfun.hist.extract(payload.histograms.ssl_handshake_result_ech).values,0)),
-        SUM(mozfun.hist.threshold_count(payload.histograms.ssl_handshake_result_ech,1))
-    )
-</code></pre>
-
-</details>
-
-<hr />
-<h3 id="tls_successful_connections_overall"><code>tls_successful_connections_overall</code></h3>
-<hr />
-<p>Analysis Period: <code>weekly</code>, <code>overall</code></p>
-<p>Data Source: <a href="#main"><code>main</code></a></p>
-<p>Statistics: <code>empirical_cdf</code>, <code>kernel_density_estimate</code>, <code>deciles</code>, <code>bootstrap_mean</code></p>
-<details>
-<summary>Definition:</summary>
-
-
-<pre><code class="language-sql">SAFE_DIVIDE(
-        SUM(mozfun.map.get_key(mozfun.hist.extract(payload.histograms.ssl_handshake_result).values,0)),
-        SUM(mozfun.hist.threshold_count(payload.histograms.ssl_handshake_result,1))
-    )
-</code></pre>
-
-</details>
-
-<hr />
-<h3 id="tls_failed_cert_validation_time"><code>tls_failed_cert_validation_time</code></h3>
-<hr />
-<p>Analysis Period: <code>weekly</code>, <code>overall</code></p>
-<p>Data Source: <a href="#main"><code>main</code></a></p>
-<p>Statistics: <code>empirical_cdf</code>, <code>kernel_density_estimate</code>, <code>deciles</code>, <code>bootstrap_mean</code></p>
-<details>
-<summary>Definition:</summary>
-
-
-<pre><code class="language-sql">SAFE_DIVIDE(
-        SUM(CAST(JSON_EXTRACT_SCALAR(payload.processes.content.histograms.ssl_initial_failed_cert_validation_time_mozillapkix, &quot;$.sum&quot;) AS int64)),
-        SUM((SELECT SUM(value) FROM UNNEST(mozfun.hist.extract(payload.processes.content.histograms.ssl_initial_failed_cert_validation_time_mozillapkix).values)))
-    )
-</code></pre>
-
-</details>
-
-<hr />
-<h3 id="tls_successful_cert_validation_time"><code>tls_successful_cert_validation_time</code></h3>
-<hr />
-<p>Analysis Period: <code>weekly</code>, <code>overall</code></p>
-<p>Data Source: <a href="#main"><code>main</code></a></p>
-<p>Statistics: <code>empirical_cdf</code>, <code>kernel_density_estimate</code>, <code>deciles</code>, <code>bootstrap_mean</code></p>
-<details>
-<summary>Definition:</summary>
-
-
-<pre><code class="language-sql">SAFE_DIVIDE(
-        SUM(CAST(JSON_EXTRACT_SCALAR(payload.processes.content.histograms.ssl_succesful_cert_validation_time_mozillapkix, &quot;$.sum&quot;) AS int64)),
-        SUM((SELECT SUM(value) FROM UNNEST(mozfun.hist.extract(payload.processes.content.histograms.ssl_succesful_cert_validation_time_mozillapkix).values)))
-    )
-</code></pre>
-
-</details>
-
-<hr />
-<h3 id="http_channels_success"><code>http_channels_success</code></h3>
-<hr />
-<p>Analysis Period: <code>weekly</code>, <code>overall</code></p>
-<p>Data Source: <a href="#main"><code>main</code></a></p>
-<p>Statistics: <code>empirical_cdf</code>, <code>kernel_density_estimate</code>, <code>deciles</code>, <code>bootstrap_mean</code></p>
-<details>
-<summary>Definition:</summary>
-
-
-<pre><code class="language-sql">SAFE_DIVIDE(
-        SUM(mozfun.map.get_key(mozfun.hist.extract(payload.histograms.http_channel_onstart_success).values,0)),
-        SUM(mozfun.hist.threshold_count(payload.histograms.http_channel_onstart_success,1))
-    )
-</code></pre>
-
-</details>
-
-<hr />
-<h3 id="http_pageloads_using_tls"><code>http_pageloads_using_tls</code></h3>
-<hr />
-<p>Analysis Period: <code>weekly</code>, <code>overall</code></p>
-<p>Data Source: <a href="#main"><code>main</code></a></p>
-<p>Statistics: <code>empirical_cdf</code>, <code>kernel_density_estimate</code>, <code>deciles</code>, <code>bootstrap_mean</code></p>
-<details>
-<summary>Definition:</summary>
-
-
-<pre><code class="language-sql">SAFE_DIVIDE(
-        SUM(mozfun.map.get_key(mozfun.hist.extract(payload.histograms.http_pageload_is_ssl).values,0)),
-        SUM(mozfun.hist.threshold_count(payload.histograms.http_pageload_is_ssl,1))
-    )
-</code></pre>
-
-</details>
-
-<hr />
-<h3 id="http_transactions_using_tls"><code>http_transactions_using_tls</code></h3>
-<hr />
-<p>Analysis Period: <code>weekly</code>, <code>overall</code></p>
-<p>Data Source: <a href="#main"><code>main</code></a></p>
-<p>Statistics: <code>empirical_cdf</code>, <code>kernel_density_estimate</code>, <code>deciles</code>, <code>bootstrap_mean</code></p>
-<details>
-<summary>Definition:</summary>
-
-
-<pre><code class="language-sql">SAFE_DIVIDE(
-        SUM(mozfun.map.get_key(mozfun.hist.extract(payload.histograms.http_transaction_is_ssl).values,0)),
-        SUM(mozfun.hist.threshold_count(payload.histograms.http_transaction_is_ssl,1))
-    )
-</code></pre>
-
-</details>
-
-<hr />
-<h3 id="cert_error_page_clicked"><code>cert_error_page_clicked</code></h3>
-<p>**Cert Error Pages Clicked **</p>
-<p>Analysis Period: <code>weekly</code>, <code>overall</code></p>
-<p>Data Source: <a href="#events_certerror"><code>events_certerror</code></a></p>
-<p>Statistics: <code>empirical_cdf</code>, <code>kernel_density_estimate</code>, <code>deciles</code>, <code>bootstrap_mean</code></p>
-<details>
-<summary>Definition:</summary>
-
-
-<pre><code class="language-sql">(
-    COALESCE(COUNTIF(
-        event_category = 'security.ui.certerror' AND
-        event_method = 'click' AND
-        event_object = 'aboutcerterror'
-    ), 0)
-)
-</code></pre>
-
-</details>
-
-<hr />
-<h3 id="cert_error_page_loaded"><code>cert_error_page_loaded</code></h3>
-<p>**Cert Error Pages Loaded **</p>
-<p>Analysis Period: <code>weekly</code>, <code>overall</code></p>
-<p>Data Source: <a href="#events_certerror"><code>events_certerror</code></a></p>
-<p>Statistics: <code>empirical_cdf</code>, <code>kernel_density_estimate</code>, <code>deciles</code>, <code>bootstrap_mean</code></p>
-<details>
-<summary>Definition:</summary>
-
-
-<pre><code class="language-sql">(
-    COALESCE(COUNTIF(
-        event_category = 'security.ui.certerror' AND
-        event_method = 'load' AND
-        event_object = 'aboutcerterror'
-    ), 0)
-)
-</code></pre>
-
-</details>
-
-<hr />
-<h3 id="time_to_response_start_ms"><code>time_to_response_start_ms</code></h3>
-<hr />
-<p>Analysis Period: <code>weekly</code>, <code>overall</code></p>
-<p>Data Source: <a href="#main"><code>main</code></a></p>
-<p>Statistics: <code>empirical_cdf</code>, <code>kernel_density_estimate</code>, <code>deciles</code></p>
-<details>
-<summary>Definition:</summary>
-
-
-<pre><code class="language-sql">SAFE_DIVIDE(
-        SUM(CAST(JSON_EXTRACT_SCALAR(payload.processes.content.histograms.time_to_response_start_ms, &quot;$.sum&quot;) AS int64)),
-        SUM((SELECT SUM(value) FROM UNNEST(mozfun.hist.extract(payload.processes.content.histograms.time_to_response_start_ms).values)))
-    )
-</code></pre>
-
-</details>
-
-<hr />
-<h3 id="http_page_open_to_first_sent"><code>http_page_open_to_first_sent</code></h3>
-<hr />
-<p>Analysis Period: <code>weekly</code>, <code>overall</code></p>
-<p>Data Source: <a href="#main"><code>main</code></a></p>
-<p>Statistics: <code>empirical_cdf</code>, <code>kernel_density_estimate</code>, <code>deciles</code></p>
-<details>
-<summary>Definition:</summary>
-
-
-<pre><code class="language-sql">SAFE_DIVIDE(
-        SUM(CAST(JSON_EXTRACT_SCALAR(payload.processes.content.histograms.http_page_open_to_first_sent, &quot;$.sum&quot;) AS int64)),
-        SUM((SELECT SUM(value) FROM UNNEST(mozfun.hist.extract(payload.processes.content.histograms.http_page_open_to_first_sent).values)))
-    )
-</code></pre>
-
-</details>
-
-<hr />
-<h3 id="http_sub_tls_handshake"><code>http_sub_tls_handshake</code></h3>
-<hr />
-<p>Analysis Period: <code>weekly</code>, <code>overall</code></p>
-<p>Data Source: <a href="#main"><code>main</code></a></p>
-<p>Statistics: <code>empirical_cdf</code>, <code>kernel_density_estimate</code>, <code>deciles</code></p>
-<details>
-<summary>Definition:</summary>
-
-
-<pre><code class="language-sql">SAFE_DIVIDE(
-        SUM(CAST(JSON_EXTRACT_SCALAR(payload.processes.content.histograms.http_sub_tls_handshake, &quot;$.sum&quot;) AS int64)),
-        SUM((SELECT SUM(value) FROM UNNEST(mozfun.hist.extract(payload.processes.content.histograms.http_sub_tls_handshake).values)))
-    )
-</code></pre>
-
-</details>
-
-<hr />
-<h3 id="http_page_tls_handshake"><code>http_page_tls_handshake</code></h3>
-<hr />
-<p>Analysis Period: <code>weekly</code>, <code>overall</code></p>
-<p>Data Source: <a href="#main"><code>main</code></a></p>
-<p>Statistics: <code>empirical_cdf</code>, <code>kernel_density_estimate</code>, <code>deciles</code></p>
-<details>
-<summary>Definition:</summary>
-
-
-<pre><code class="language-sql">SAFE_DIVIDE(
-        SUM(CAST(JSON_EXTRACT_SCALAR(payload.processes.content.histograms.http_page_tls_handshake, &quot;$.sum&quot;) AS int64)),
-        SUM((SELECT SUM(value) FROM UNNEST(mozfun.hist.extract(payload.processes.content.histograms.http_page_tls_handshake).values)))
-    )
-</code></pre>
-
-</details>
-
-<hr />
-<h3 id="dns_lookup_time"><code>dns_lookup_time</code></h3>
-<hr />
-<p>Analysis Period: <code>weekly</code>, <code>overall</code></p>
-<p>Data Source: <a href="#main"><code>main</code></a></p>
-<p>Statistics: <code>empirical_cdf</code>, <code>kernel_density_estimate</code>, <code>deciles</code></p>
-<details>
-<summary>Definition:</summary>
-
-
-<pre><code class="language-sql">SAFE_DIVIDE(
-        SUM(CAST(JSON_EXTRACT_SCALAR(payload.processes.content.histograms.dns_lookup_time, &quot;$.sum&quot;) AS int64)),
-        SUM((SELECT SUM(value) FROM UNNEST(mozfun.hist.extract(payload.processes.content.histograms.dns_lookup_time).values)))
-    )
+<pre><code class="language-sql">ARRAY_AGG(metrics.memory_distribution.cert_storage_memory IGNORE NULLS)
 </code></pre>
 
 </details>
 
 <hr />
 <h2 id="data-sources">Data Sources</h2>
-<h3 id="main"><a href="#main"><code>main</code></a></h3>
-<details>
-<summary>Definition:</summary>
-
-
-<pre><code class="language-sql">
-</code></pre>
-
-</details>
-
-<hr />
-<h3 id="events_certerror-certerror-events"><a href="#events_certerror"><code>events_certerror</code>- Certerror events</a></h3>
-<p>Cert Error related events</p>
+<h3 id="metrics-glean-metrics"><a href="#metrics"><code>metrics</code>- Glean Metrics</a></h3>
+<p>The Glean metrics ping</p>
 <details>
 <summary>Definition:</summary>
 
@@ -2794,7 +2303,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../firefox_suggest/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Firefox suggest" rel="prev">
+        <a href="../../fenix/sponsored_tiles/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Sponsored tiles" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -2803,20 +2312,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Firefox suggest
+              Sponsored tiles
             </div>
           </div>
         </a>
       
       
         
-        <a href="../networking_performance/" class="md-footer__link md-footer__link--next" aria-label="Next: Networking performance" rel="next">
+        <a href="../defaults_and_os_integration/" class="md-footer__link md-footer__link--next" aria-label="Next: Defaults and os integration" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Networking performance
+              Defaults and os integration
             </div>
           </div>
           <div class="md-footer__button md-icon">
