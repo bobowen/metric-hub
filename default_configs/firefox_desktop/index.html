@@ -1842,29 +1842,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#qualified_cumulative_days_of_use" class="md-nav__link">
-    qualified_cumulative_days_of_use
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#search_count" class="md-nav__link">
-    search_count
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#days_of_use" class="md-nav__link">
     days_of_use
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#retained" class="md-nav__link">
-    retained
   </a>
   
 </li>
@@ -1877,8 +1856,29 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#search_count" class="md-nav__link">
+    search_count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retained" class="md-nav__link">
+    retained
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#uri_count" class="md-nav__link">
     uri_count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qualified_cumulative_days_of_use" class="md-nav__link">
+    qualified_cumulative_days_of_use
   </a>
   
 </li>
@@ -2247,29 +2247,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#qualified_cumulative_days_of_use" class="md-nav__link">
-    qualified_cumulative_days_of_use
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#search_count" class="md-nav__link">
-    search_count
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#days_of_use" class="md-nav__link">
     days_of_use
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#retained" class="md-nav__link">
-    retained
   </a>
   
 </li>
@@ -2282,8 +2261,29 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#search_count" class="md-nav__link">
+    search_count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retained" class="md-nav__link">
+    retained
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#uri_count" class="md-nav__link">
     uri_count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qualified_cumulative_days_of_use" class="md-nav__link">
+    qualified_cumulative_days_of_use
   </a>
   
 </li>
@@ -2460,10 +2460,9 @@ window does not need to be focused.</p>
 </details>
 
 <hr />
-<h4 id="qualified_cumulative_days_of_use"><code>qualified_cumulative_days_of_use</code></h4>
-<p><strong>QCDOU</strong></p>
-<p>The number of days in the interval that each client sent a main ping,
-given that the client had &gt;0 active hours and &gt;0 URIs loaded.</p>
+<h4 id="days_of_use"><code>days_of_use</code></h4>
+<p><strong>Days of use</strong></p>
+<p>The number of days in the interval that each client sent a main ping.</p>
 <p>Analysis Periods:  <code>daily</code>  </p>
 <p>Data Source: <a href="#clients_daily"><code>clients_daily</code></a></p>
 <p>Statistics: <code>mean</code></p>
@@ -2471,10 +2470,24 @@ given that the client had &gt;0 active hours and &gt;0 URIs loaded.</p>
 <summary>Definition:</summary>
 
 
-<pre><code class="language-sql">COUNTIF(
-    active_hours_sum &gt; 0 AND
-    scalar_parent_browser_engagement_total_uri_count_normal_and_private_mode_sum &gt; 0
-)
+<pre><code class="language-sql">COUNT(submission_date)
+</code></pre>
+
+</details>
+
+<hr />
+<h4 id="ad_clicks"><code>ad_clicks</code></h4>
+<p><strong>Ad clicks</strong></p>
+<p>Counts clicks on ads on search engine result pages with a Mozilla
+partner tag.</p>
+<p>Analysis Periods:  <code>daily</code>  </p>
+<p>Data Source: <a href="#search_clients_engines_sources_daily"><code>search_clients_engines_sources_daily</code></a></p>
+<p>Statistics: <code>mean</code></p>
+<details>
+<summary>Definition:</summary>
+
+
+<pre><code class="language-sql">COALESCE(SUM(ad_click), 0)
 </code></pre>
 
 </details>
@@ -2499,22 +2512,6 @@ Learn more in the
 </details>
 
 <hr />
-<h4 id="days_of_use"><code>days_of_use</code></h4>
-<p><strong>Days of use</strong></p>
-<p>The number of days in the interval that each client sent a main ping.</p>
-<p>Analysis Periods:  <code>daily</code>  </p>
-<p>Data Source: <a href="#clients_daily"><code>clients_daily</code></a></p>
-<p>Statistics: <code>mean</code></p>
-<details>
-<summary>Definition:</summary>
-
-
-<pre><code class="language-sql">COUNT(submission_date)
-</code></pre>
-
-</details>
-
-<hr />
 <h4 id="retained"><code>retained</code></h4>
 <p><strong>Retained</strong></p>
 <p>Records whether a client submitted any pings (i.e. used Firefox).</p>
@@ -2526,23 +2523,6 @@ Learn more in the
 
 
 <pre><code class="language-sql">IF(COALESCE(SUM(pings_aggregated_by_this_row), 0) &gt; 0, 1, 0)
-</code></pre>
-
-</details>
-
-<hr />
-<h4 id="ad_clicks"><code>ad_clicks</code></h4>
-<p><strong>Ad clicks</strong></p>
-<p>Counts clicks on ads on search engine result pages with a Mozilla
-partner tag.</p>
-<p>Analysis Periods:  <code>daily</code>  </p>
-<p>Data Source: <a href="#search_clients_engines_sources_daily"><code>search_clients_engines_sources_daily</code></a></p>
-<p>Statistics: <code>mean</code></p>
-<details>
-<summary>Definition:</summary>
-
-
-<pre><code class="language-sql">COALESCE(SUM(ad_click), 0)
 </code></pre>
 
 </details>
@@ -2565,6 +2545,26 @@ Includes within-page navigation events (e.g. to anchors).</p>
 </details>
 
 <hr />
+<h4 id="qualified_cumulative_days_of_use"><code>qualified_cumulative_days_of_use</code></h4>
+<p><strong>QCDOU</strong></p>
+<p>The number of days in the interval that each client sent a main ping,
+given that the client had &gt;0 active hours and &gt;0 URIs loaded.</p>
+<p>Analysis Periods:  <code>daily</code>  </p>
+<p>Data Source: <a href="#clients_daily"><code>clients_daily</code></a></p>
+<p>Statistics: <code>mean</code></p>
+<details>
+<summary>Definition:</summary>
+
+
+<pre><code class="language-sql">COUNTIF(
+    active_hours_sum &gt; 0 AND
+    scalar_parent_browser_engagement_total_uri_count_normal_and_private_mode_sum &gt; 0
+)
+</code></pre>
+
+</details>
+
+<hr />
 <h2 id="jetstream-config">jetstream-config</h2>
 <p><a href="https://github.com/mozilla/metric-hub/blob/main/defaults/firefox_desktop.toml">Source</a>  |  <a href="https://github.com/mozilla/metric-hub/edit/main/defaults/firefox_desktop.toml">Edit</a></p>
 <h3 id="metrics_1">Metrics</h3>
@@ -2578,7 +2578,7 @@ needs to be aggregated by <code>submission_date</code>. If it is not aggregated 
 similar to a "days of use" metric, and not DAU.</p>
 <p>For more information, refer to <a href="https://mozilla-hub.atlassian.net/wiki/spaces/DATA/pages/314704478/Daily+Active+Users+DAU+Metric">the DAU description in Confluence</a>.
 For questions please contact bochocki@mozilla.com or firefox-kpi@mozilla.com.</p>
-<p>Analysis Periods:  <code>daily</code> ,   <code>preenrollment_days28</code> ,   <code>preenrollment_weekly</code> ,   <code>overall</code> ,   <code>weekly</code>  </p>
+<p>Analysis Periods:  <code>daily</code> ,   <code>weekly</code> ,   <code>preenrollment_days28</code> ,   <code>overall</code> ,   <code>preenrollment_weekly</code>  </p>
 <p>Data Source: <a href="#clients_daily"><code>clients_daily</code></a></p>
 <p>Statistics: <code>per_client_dau_impact</code></p>
 <details>
@@ -2613,7 +2613,7 @@ For questions please contact bochocki@mozilla.com or firefox-kpi@mozilla.com.</p
 <h4 id="retained_1"><code>retained</code></h4>
 <p><strong>Retained</strong></p>
 <p>Records whether a client submitted any pings (i.e. used Firefox).</p>
-<p>Analysis Periods:  <code>weekly</code> ,   <code>daily</code>  </p>
+<p>Analysis Periods:  <code>daily</code> ,   <code>weekly</code>  </p>
 <p>Data Source: <a href="#clients_daily"><code>clients_daily</code></a></p>
 <p>Statistics: <code>binomial</code></p>
 <details>
@@ -2629,7 +2629,7 @@ For questions please contact bochocki@mozilla.com or firefox-kpi@mozilla.com.</p
 <h4 id="is_default_browser"><code>is_default_browser</code></h4>
 <p><strong>Is Default Browser</strong></p>
 <p>Was Firefox the default browser at any point during the interval?</p>
-<p>Analysis Periods:  <code>preenrollment_weekly</code> ,   <code>preenrollment_days28</code> ,   <code>overall</code> ,   <code>weekly</code>  </p>
+<p>Analysis Periods:  <code>preenrollment_weekly</code> ,   <code>weekly</code> ,   <code>overall</code> ,   <code>preenrollment_days28</code>  </p>
 <p>Data Source: <a href="#clients_daily"><code>clients_daily</code></a></p>
 <p>Statistics: <code>binomial</code></p>
 <details>
@@ -2646,7 +2646,7 @@ For questions please contact bochocki@mozilla.com or firefox-kpi@mozilla.com.</p
 <p><strong>QCDOU</strong></p>
 <p>The number of days in the interval that each client sent a main ping,
 given that the client had &gt;0 active hours and &gt;0 URIs loaded.</p>
-<p>Analysis Periods:  <code>preenrollment_weekly</code> ,   <code>preenrollment_days28</code> ,   <code>overall</code> ,   <code>weekly</code>  </p>
+<p>Analysis Periods:  <code>preenrollment_weekly</code> ,   <code>weekly</code> ,   <code>overall</code> ,   <code>preenrollment_days28</code>  </p>
 <p>Data Source: <a href="#clients_daily"><code>clients_daily</code></a></p>
 <p>Statistics: <code>bootstrap_mean</code>, <code>linear_model_mean</code>, <code>deciles</code></p>
 <details>
@@ -2668,7 +2668,7 @@ given that the client had &gt;0 active hours and &gt;0 URIs loaded.</p>
 Search Access Points.
 Learn more in the
 <a href="https://docs.telemetry.mozilla.org/datasets/search.html">search data documentation</a>.</p>
-<p>Analysis Periods:  <code>preenrollment_weekly</code> ,   <code>preenrollment_days28</code> ,   <code>overall</code> ,   <code>weekly</code>  </p>
+<p>Analysis Periods:  <code>preenrollment_weekly</code> ,   <code>weekly</code> ,   <code>overall</code> ,   <code>preenrollment_days28</code>  </p>
 <p>Data Source: <a href="#search_clients_engines_sources_daily"><code>search_clients_engines_sources_daily</code></a></p>
 <p>Statistics: <code>bootstrap_mean</code>, <code>linear_model_mean</code>, <code>deciles</code></p>
 <details>
@@ -2685,7 +2685,7 @@ Learn more in the
 <p><strong>URIs visited</strong></p>
 <p>Counts the total number of URIs visited.
 Includes within-page navigation events (e.g. to anchors).</p>
-<p>Analysis Periods:  <code>preenrollment_weekly</code> ,   <code>preenrollment_days28</code> ,   <code>overall</code> ,   <code>weekly</code>  </p>
+<p>Analysis Periods:  <code>preenrollment_weekly</code> ,   <code>weekly</code> ,   <code>overall</code> ,   <code>preenrollment_days28</code>  </p>
 <p>Data Source: <a href="#clients_daily"><code>clients_daily</code></a></p>
 <p>Statistics: <code>bootstrap_mean</code>, <code>linear_model_mean</code>, <code>deciles</code></p>
 <details>
@@ -2701,9 +2701,9 @@ Includes within-page navigation events (e.g. to anchors).</p>
 <h4 id="days_of_use_1"><code>days_of_use</code></h4>
 <p><strong>Days of use</strong></p>
 <p>The number of days in the interval that each client sent a main ping.</p>
-<p>Analysis Periods:  <code>preenrollment_weekly</code> ,   <code>preenrollment_days28</code> ,   <code>overall</code> ,   <code>weekly</code>  </p>
+<p>Analysis Periods:  <code>preenrollment_weekly</code> ,   <code>weekly</code> ,   <code>overall</code> ,   <code>preenrollment_days28</code>  </p>
 <p>Data Source: <a href="#clients_daily"><code>clients_daily</code></a></p>
-<p>Statistics: <code>bootstrap_mean</code>, <code>deciles</code>, <code>linear_model_mean</code>, <code>empirical_cdf</code></p>
+<p>Statistics: <code>empirical_cdf</code>, <code>bootstrap_mean</code>, <code>linear_model_mean</code>, <code>deciles</code></p>
 <details>
 <summary>Definition:</summary>
 
@@ -2718,7 +2718,7 @@ Includes within-page navigation events (e.g. to anchors).</p>
 <p><strong>Ad clicks</strong></p>
 <p>Counts clicks on ads on search engine result pages with a Mozilla
 partner tag.</p>
-<p>Analysis Periods:  <code>preenrollment_weekly</code> ,   <code>preenrollment_days28</code> ,   <code>overall</code> ,   <code>weekly</code>  </p>
+<p>Analysis Periods:  <code>preenrollment_weekly</code> ,   <code>weekly</code> ,   <code>overall</code> ,   <code>preenrollment_days28</code>  </p>
 <p>Data Source: <a href="#search_clients_engines_sources_daily"><code>search_clients_engines_sources_daily</code></a></p>
 <p>Statistics: <code>bootstrap_mean</code>, <code>linear_model_mean</code>, <code>deciles</code></p>
 <details>
@@ -2736,7 +2736,7 @@ partner tag.</p>
 <p>Measures the amount of time (in 5-second increments) during which
 Firefox received user input from a keyboard or mouse. The Firefox
 window does not need to be focused.</p>
-<p>Analysis Periods:  <code>preenrollment_weekly</code> ,   <code>preenrollment_days28</code> ,   <code>overall</code> ,   <code>weekly</code>  </p>
+<p>Analysis Periods:  <code>preenrollment_weekly</code> ,   <code>weekly</code> ,   <code>overall</code> ,   <code>preenrollment_days28</code>  </p>
 <p>Data Source: <a href="#clients_daily"><code>clients_daily</code></a></p>
 <p>Statistics: <code>bootstrap_mean</code>, <code>linear_model_mean</code>, <code>deciles</code></p>
 <details>
