@@ -2327,7 +2327,10 @@
 <summary>Definition:</summary>
 
 
-<pre><code class="language-sql">ARRAY_AGG(metrics.memory_distribution.cert_storage_memory IGNORE NULLS)
+<pre><code class="language-sql">SAFE_DIVIDE(
+        SUM(metrics.memory_distribution.cert_storage_memory.sum),
+        SUM((SELECT SUM(value) FROM UNNEST(metrics.memory_distribution.cert_storage_memory.values)))
+    )
 </code></pre>
 
 </details>
