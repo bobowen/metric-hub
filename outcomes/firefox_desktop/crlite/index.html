@@ -687,8 +687,22 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ocsp_use_counter_ratio" class="md-nav__link">
+    ocsp_use_counter_ratio
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ocsp_use_counter" class="md-nav__link">
     ocsp_use_counter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crlite_use_counter_ratio" class="md-nav__link">
+    crlite_use_counter_ratio
   </a>
   
 </li>
@@ -726,6 +740,13 @@
   
     <nav class="md-nav" aria-label="Data Sources">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    ``
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#metrics-glean-metrics" class="md-nav__link">
@@ -2166,8 +2187,22 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ocsp_use_counter_ratio" class="md-nav__link">
+    ocsp_use_counter_ratio
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ocsp_use_counter" class="md-nav__link">
     ocsp_use_counter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crlite_use_counter_ratio" class="md-nav__link">
+    crlite_use_counter_ratio
   </a>
   
 </li>
@@ -2205,6 +2240,13 @@
   
     <nav class="md-nav" aria-label="Data Sources">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    ``
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#metrics-glean-metrics" class="md-nav__link">
@@ -2269,12 +2311,28 @@
 </details>
 
 <hr />
+<h3 id="ocsp_use_counter_ratio"><code>ocsp_use_counter_ratio</code></h3>
+<p>**OCSP usage vs revocation checks **</p>
+<p>Ratio of revocation checks performed using OCSP compared to total.</p>
+<p>Analysis Period: <code>weekly</code>, <code>overall</code></p>
+<p>Data Source: <a href="#">``</a></p>
+<p>Statistics: <code>population_ratio</code></p>
+<details>
+<summary>Definition:</summary>
+
+
+<pre><code class="language-sql">None
+</code></pre>
+
+</details>
+
+<hr />
 <h3 id="ocsp_use_counter"><code>ocsp_use_counter</code></h3>
 <p>**OCSP usage **</p>
 <p>Number of revocation checks performed using OCSP.</p>
 <p>Analysis Period: <code>weekly</code>, <code>overall</code></p>
 <p>Data Source: <a href="#metrics"><code>metrics</code></a></p>
-<p>Statistics: <code>population_ratio</code>, <code>sum</code></p>
+<p>Statistics: <code>sum</code></p>
 <details>
 <summary>Definition:</summary>
 
@@ -2285,12 +2343,28 @@
 </details>
 
 <hr />
+<h3 id="crlite_use_counter_ratio"><code>crlite_use_counter_ratio</code></h3>
+<p>**CRLite usage vs revocation checks **</p>
+<p>Ratio of revocation checks performed using CRLite compared to total.</p>
+<p>Analysis Period: <code>weekly</code>, <code>overall</code></p>
+<p>Data Source: <a href="#">``</a></p>
+<p>Statistics: <code>population_ratio</code></p>
+<details>
+<summary>Definition:</summary>
+
+
+<pre><code class="language-sql">None
+</code></pre>
+
+</details>
+
+<hr />
 <h3 id="crlite_use_counter"><code>crlite_use_counter</code></h3>
 <p>**CRLite usage **</p>
 <p>Number of revocation checks performed using CRLite.</p>
 <p>Analysis Period: <code>weekly</code>, <code>overall</code></p>
 <p>Data Source: <a href="#metrics"><code>metrics</code></a></p>
-<p>Statistics: <code>population_ratio</code>, <code>sum</code></p>
+<p>Statistics: <code>sum</code></p>
 <details>
 <summary>Definition:</summary>
 
@@ -2337,6 +2411,17 @@
 
 <hr />
 <h2 id="data-sources">Data Sources</h2>
+<h3 id="_1"><a href="#">``</a></h3>
+<details>
+<summary>Definition:</summary>
+
+
+<pre><code class="language-sql">
+</code></pre>
+
+</details>
+
+<hr />
 <h3 id="metrics-glean-metrics"><a href="#metrics"><code>metrics</code>- Glean Metrics</a></h3>
 <p>The Glean metrics ping</p>
 <details>
